@@ -15,6 +15,7 @@ export default class SetCanva{
 divisione(){
     let palla = new Palla(270)
     palla.divisione("spostaTO SOTTO")
+    // palla.  
     }
 
 }
