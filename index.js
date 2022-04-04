@@ -3,8 +3,6 @@ import SetCanva from './scripts/SetCanva.js'
 
 // new Palla();
 const canvas = new SetCanva;
-canvas.divisione()
-// SetCanva.drawPalla();
 
 console.log(window.innerHeight, window.innerWidth)
 

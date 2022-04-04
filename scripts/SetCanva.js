@@ -9,18 +9,12 @@ export default class SetCanva{
     canvas.height = window.innerHeight;
     // qui creo l'oggetto conesto che mi fa lavorare in due D
     const c = canvas.getContext("2d");
-    
-}
-
-divisione(){
-    let palla = new Palla(270)
-    palla.divisione("spostaTO SOTTO")
-    // palla.  
-    }
+    const posy = canvas.height/2
+    const posx = canvas.width/2
+    const palla = new Palla(270, posx, posy)
 
 }
 
-
-
-
-
+mitosi(){}
+    // console.log(palla);
+}
