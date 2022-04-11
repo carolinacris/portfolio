@@ -1,22 +1,15 @@
 
 
-export default class Cell{
-    constructor(stRadius, posx, posy){ 
-            //questo puo andare bene per le palle figlie ma non per quella grossa questo va preso e messo dove dirai push new palla
-            //massimo e minimo valore possibile per y
-            // const miny = canvas.height/2 - stRadius/2
-            // const maxy = canvas.height/2 + stRadius/2
-            //massima e minimo valore di x
-            // const minx = canvas.width/2 - stRadius  
-            // const maxx = canvas.width/2 + stRadius  
+export default class Palla{
+    constructor(stRadius, c){ 
 
-            //calcolo un valore randomico per trovare la poszione della palla che si crea
-            // const posy = Math.random() * (maxy - miny) + miny;
+            this.stRadius = stRadius;
+            // calcolo un valore randomico per trovare la poszione della palla che si crea
+            const posy = this.positionY()
             // const posx = Math.random() * (maxx - minx) + minx;
+            const posx = this.positionX()
 
-
-            console.log(stRadius);
-            const c = canvas.getContext("2d");
+            this.c = c;
             //cerchio1-----------------------------------------------------------------------
 
             c.beginPath()
@@ -93,36 +86,40 @@ export default class Cell{
             c.closePath()
             
             //nucleo--------------------------------------------------------------
-            
+            const posxNucleo = posx+ stRadius*0.3
+            const posyNucelo = posy+ stRadius*0.36
+
             c.beginPath()
-            c.arc(posx*1.10, posy*1.25, stRadius*0.2555, 0, 2 * Math.PI);
-            c.filter = 'blur(20px)'
+            c.arc(posxNucleo, posyNucelo , stRadius*0.2555, 0, 2 * Math.PI);
+            c.filter = 'blur(2px)'
             c.fillStyle = '#242424'
             c.fill()
-            c.arc(posx*1.10,posy*1.25, stRadius*0.2555, 0, 2 * Math.PI);
+            c.arc(posxNucleo, posyNucelo, stRadius*0.2555, 0, 2 * Math.PI);
             c.filter = 'none'
             c.fillStyle = '#242424'
             c.fill() 
             c.closePath()
-
+      
     
     }
 
-    mitosi(){
-        //da chiamare di la con palla.metodo('parametro richiesto')
-        
+    positionX(){
 
-        // if(pos) {
-        //     this.pos = pos.copy();
-        //   } else {
-        //      this.pos = createVector(random(width/5, width*4/5), random(height/5,height*4/5));
-        //   }
-        
-        // this.pos.x += random(-this.stRadius*0.3,this.stRadius*0.3);
-        // var palla = new Palla(this.pos, this.stRadius*0.7, this.c);
-        // return palla;
-        
-        
+        // massima e minimo valore di x
+        const minx = canvas.width/2 - this.stRadius  
+        const maxx = canvas.width/2 + this.stRadius  
+        const positionX = Math.random() * (maxx - minx) + minx;
 
+        return positionX 
+
+    }
+    positionY(){
+        // massimo e minimo valore possibile per y
+        const miny = canvas.height/2 - this.stRadius/2
+        const maxy = canvas.height/2 + this.stRadius/2
+        const positionY = Math.random() * (maxy - miny) + miny;
+        
+        return positionY
+        console.log(positionY);
     }
 }
