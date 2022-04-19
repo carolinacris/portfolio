@@ -142,7 +142,7 @@ canvas {
      display: flex;
      flex-direction: column;
     }
-  .comparsa::-webkit-scrollbar, .who::-webkit-scrollbar, .container::-webkit-scrollbar, .body::-webkit-scrollbar{display: none;}
+  .comparsa::-webkit-scrollbar, .who::-webkit-scrollbar, .container::-webkit-scrollbar, .body::-webkit-scrollbar, .porto::-webkit-scrollbar{display: none;}
   p:nth-child(3){
    text-align: end;
   }
@@ -192,3 +192,28 @@ canvas {
         }
 
       }
+
+
+/* ------------------------------------------------------ portfolio ----------------------------------------------------------------------------- */
+.porto{overflow: scroll ;}
+.porto-container{
+  height: 200vh;
+  width: 200vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(25vw, 1fr));
+  column-gap: 5%;
+  row-gap: 5%;
+  background-color: #292929;
+  position: relative;
+  
+  padding: 5%;
+}
+.el{
+  background-color: aqua;
+  height: 25vw;
+  width: 25vw;
+}
+.el:nth-child(odd){
+  background-color: red;
+}

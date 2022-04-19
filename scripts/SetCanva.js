@@ -34,11 +34,10 @@ export default class SetCanva{
   
 }
 
-redraw() {
-  // Per ogni palla in this.palle 
-  //   drawpalla 
-}
 
+draw(
+  //qui gli dico di fare i miei cerchi, for each element 
+)
 mousePressed(){
   //riesco ad ottenere la posizione della palla inicata 
   //cerco di attaccare un evento click alla canvas dove per ogni palla dell'array, se la poszione del mouse coincide con una delle posizioni delle palle della array
