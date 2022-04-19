@@ -37,7 +37,7 @@ canvas {
       transition:  ease 0.2s;
     }
     .display{display: block !important;}
-    p, h1{
+    p, h1, button{
       color: #242424; 
       font-family: 'Darker Grotesque Regular'; 
       font-size: 24px; 
@@ -139,5 +139,56 @@ canvas {
   .text-box{
     margin:50px;
      height: 150vh;
+     display: flex;
+     flex-direction: column;
     }
   .comparsa::-webkit-scrollbar, .who::-webkit-scrollbar, .container::-webkit-scrollbar, .body::-webkit-scrollbar{display: none;}
+  p:nth-child(3){
+   text-align: end;
+  }
+  button{border: none;       
+        padding: 0;
+        margin: 0;
+        /* text-align: end; */
+        color: #292929;
+        animation: trigger 1s steps(2) infinite;
+      }
+  button:hover{font-weight: 600;}
+
+      @keyframes trigger {
+        0% {
+          color:rgb(29, 29, 29);
+          position: relative;
+          right: 1px;
+        }
+        20% {
+          color: rgb(38, 255, 0);
+          position: relative;
+          bottom: 1px;
+        }
+        30% {
+          color: rgb(152, 152, 152);
+        }
+        40% {
+          color: rgb(15, 15, 15);
+          position: relative;
+          left: 1px;
+        }
+        50% {
+          color: rgb(38, 255, 0);
+        }
+        60% {
+          color: rgb(236, 236, 236);
+          position: relative;
+          right: 1px;
+        }
+        70% {
+          color: rgb(37, 37, 37);
+          position: relative;
+          top: 1px;
+        }
+        60% {
+          color: rgb(108, 106, 106);
+        }
+
+      }
