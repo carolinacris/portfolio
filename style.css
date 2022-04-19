@@ -3,9 +3,11 @@
     src: url(/assets/fonts/DarkerGrotesque-Regular.ttf);
 }
 body{
-    background-color: rgb(29, 29, 29); 
+    
     overflow: hidden; 
     cursor: crosshair;
+    margin: 0;
+    padding: 0;
 }
 canvas {
     background-color: #cacaca; 
@@ -17,44 +19,45 @@ canvas {
     border-radius: 27px;  
     width: 200px; 
     height: 45px;
-    position: relative;
-    top:691px;
-    left: 1430px; 
+    position: absolute;
+    bottom:50px;
+    right: 50px; 
     display: flex;
     flex-direction: column;
     align-items: center;
     z-index: 900;
-    cursor: none;
+    /* cursor: none; */
     transition:  ease 0.2s;
     overflow: scroll;
 
     }
-.who::-webkit-scrollbar{display: none;}
     .open{
-        height : 520px;
-        width : 500px;
-        transition:  ease 0.2s;
+      height : 520px;
+      width : 500px;
+      transition:  ease 0.2s;
     }
     .display{display: block !important;}
-p{
-    font-family: 'Darker Grotesque Regular'; 
-    color: #242424; font-size: 24px; 
+    p, h1{
+      color: #242424; 
+      font-family: 'Darker Grotesque Regular'; 
+      font-size: 24px; 
     line-height: 1.3rem; margin: 2rem;
-}
-span{
+    font-weight: 400;
+  }
+  span{
     font-family: 'Darker Grotesque Regular'; 
     color: #242424; 
     font-size: 24px; 
     text-align: center; 
     padding-top: 2px
-}
-
-.noise-bg {
+  }
+  
+  .noise-bg {
     position: absolute;
     width: 100vw;
     height: 100vh;
     pointer-events: none;
-
+    
   }
   .noise-bg:before {
     position: absolute;
@@ -103,3 +106,38 @@ span{
     }
   }
   
+  .wrap{overflow: hidden;}
+  .comparsa{
+    background: rgb(29, 29, 29) ; 
+    overflow: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: transform 0.6s ease;
+  }
+  .show{
+    transform: translateX(0);
+  }
+  .container{
+    /* width: 500px;
+    height: 500px; */
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(239, 239,239,1) 69%, rgba(203,255,205,1) 55%); 
+    overflow: scroll;
+    display: flex;
+    justify-content: center;
+    
+  }
+  .text-box{
+    margin:50px;
+     height: 150vh;
+    }
+  .comparsa::-webkit-scrollbar, .who::-webkit-scrollbar, .container::-webkit-scrollbar, .body::-webkit-scrollbar{display: none;}

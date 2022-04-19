@@ -1,8 +1,8 @@
 
 
 export default class Palla{
-    constructor(stRadius, c){ 
-
+    constructor(stRadius, c, canvas){ 
+            // this.canvas = canvas
             this.stRadius = stRadius;
             // calcolo un valore randomico per trovare la poszione della palla che si crea
             const posy = this.positionY()
@@ -86,21 +86,21 @@ export default class Palla{
             c.closePath()
             
             //nucleo--------------------------------------------------------------
-            const posxNucleo = posx+ stRadius*0.3
-            const posyNucelo = posy+ stRadius*0.36
+            this.posxNucleo = posx + stRadius*0.3
+            this.posyNucelo = posy + stRadius*0.36
 
             c.beginPath()
-            c.arc(posxNucleo, posyNucelo , stRadius*0.2555, 0, 2 * Math.PI);
+            c.arc(this.posxNucleo, this.posyNucelo , stRadius*0.2555, 0, 2 * Math.PI);
             c.filter = 'blur(2px)'
             c.fillStyle = '#242424'
             c.fill()
-            c.arc(posxNucleo, posyNucelo, stRadius*0.2555, 0, 2 * Math.PI);
+            c.arc(this.posxNucleo, this.posyNucelo, stRadius*0.2555, 0, 2 * Math.PI);
             c.filter = 'none'
             c.fillStyle = '#242424'
             c.fill() 
             c.closePath()
       
-    
+            // this.follow()
     }
 
     positionX(){
@@ -120,6 +120,22 @@ export default class Palla{
         const positionY = Math.random() * (maxy - miny) + miny;
         
         return positionY
-        console.log(positionY);
+        // console.log(positionY);
     }
+    
+    // follow(){
+    //     this.canvas.addEventListener("mousemove", (event)=>{
+           
+    //         let limite = 0.35;
+    //         let x= Math.cos((Math.PI*event.pageY)/canvas.height) * limite;
+    //         let y= Math.cos((Math.PI*event.pageX)/canvas.width) * limite;
+            
+    //         //bisogna campire bene il rapporto che c'è tra la distanza dal nucleo 
+    //         this.posxNucleo = x
+    //         this.posyNucelo = y
+    //     })
+
+    //     window.requestAnimationFrame(this.follow())
+    // }
+
 }
