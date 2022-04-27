@@ -1,0 +1,26 @@
+.who{background-color: white; 
+        border-radius: 27px;  
+        width: 200px; 
+        height: 45px;
+        position: absolute;
+        bottom:50px;
+        right: 50px; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 900;
+
+        transition:  ease 0.2s;
+        overflow: scroll;
+ }
+
+ button{border: none;       
+        padding: 20px 0 150px 0;
+        margin: 0;
+        color: #292929;
+        animation: trigger 1s steps(2) infinite;
+        &:hover{font-weight: 600;}
+    }
+button:nth-child(1){
+       animation: trigger 1.2s steps(3) infinite;
+}

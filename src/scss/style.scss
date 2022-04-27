@@ -1,0 +1,56 @@
+
+@import 'reset';
+@import 'variables';
+@import 'home';
+@import 'portfolio';
+@import 'single';
+@import 'typography';
+@import 'header';
+@import 'footer';
+@import 'buttons';
+@import 'animation';
+@import 'about';
+
+.comparsa::-webkit-scrollbar, 
+.who::-webkit-scrollbar, 
+.container::-webkit-scrollbar, 
+.body::-webkit-scrollbar, 
+.porto::-webkit-scrollbar, 
+.clip::-webkit-scrollbar,
+section::-webkit-scrollbar, .single .wrap section:nth-child(2)::-webkit-scrollbar
+{display: none;}
+
+body{
+    overflow: hidden; 
+    cursor: crosshair;
+    margin: 0; 
+    padding: 0;
+    background-color: #cacaca;
+}
+
+//sfondo animato di disturbo
+.noise-bg {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    
+  }
+  .noise-bg:before {
+    position: absolute;
+    content: "";
+    top: -10rem;
+    left: -10rem;
+    width: calc(100% + 20rem);
+    height: calc(100% + 20rem);
+    animation: noise 1s steps(2) infinite;
+    background: url(https://i.loli.net/2020/10/21/S92bRTHIkszBcLr.png) 50%;
+    pointer-events: none;
+  }
+
+  //cerchio che sembra un microscopio
+  .micro{ border-radius: 50%;
+    border: 1px solid chartreuse;
+    filter: blur(0.4px);
+    background: radial-gradient(circle, rgba(239, 239,239,1) 69%, rgba(203,255,205,1) 55%); 
+}

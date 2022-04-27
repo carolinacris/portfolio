@@ -1,0 +1,86 @@
+.porto{overflow:hidden ; 
+    background-color: #292929; 
+    // display: flex; 
+    // justify-content: center; 
+    // align-content: center; 
+    // flex-direction: row-reverse; 
+    /* margin: auto 0;  */
+    /* padding-top: 2.5vh */
+    header a{color: #f8f8f8}
+  }
+
+  .clip {
+    align-self: center;
+    height: 150vh; 
+    width: 150vh; 
+    border-radius: 50%;
+    background-color: #cacaca; 
+    filter: blur(0.5px);
+    margin: 0 auto;
+    position: relative;
+    bottom: 25vh;
+    -webkit-box-shadow: 0px 0px 24px 11px #CACACA; 
+    box-shadow: 0px 0px 24px 11px #CACACA;
+    overflow: scroll;
+    
+   }
+  .porto-container{
+    height: 200vh;
+    width: 200vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(25vw, 1fr));
+    column-gap: 5%;
+    row-gap: 5%;
+    background: #cacaca;
+    position: relative;
+    padding: 25%;
+    
+  }
+  .work{
+    filter: invert(100%);
+    line-height: 0;
+    font-size: 0;
+    font-weight: 0;
+    margin:0;
+    height: 25vw;
+    width: 25vw;
+    transition: ease-in-out 0.3s;
+  }
+  .work:hover{ 
+    filter: none;
+    transform: scale(1.02);
+    transition: ease-in-out 0.4s;
+  
+  }
+  .el{
+    background-color: aqua;
+    display: flex;
+    justify-content: flex-end;
+  
+  }
+  .work:nth-child(odd) .el{
+    background: url(/assets/img/foodie/foodie01.svg) no-repeat center center;
+    background-size:cover;
+  
+  }
+  
+  .el .text-box{
+    writing-mode: vertical-rl;
+    height: 25vw;
+    margin: 0;
+    opacity: 0;
+    transition: transform 0.1s ease-out;
+  }
+  .el .text-box p{
+    color: #292929;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .work:hover .el .text-box{
+    transform: translateX(2vw);
+    opacity: 1;
+    transition: 0.2s ease-out;
+  }

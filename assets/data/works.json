@@ -1,0 +1,20 @@
+[
+    {
+        "titolo": "Foodie",
+        "anno": "2021",
+        "tag": "web",
+        "img": "url(./assets/img/foodie.png)"
+    },
+    {
+        "titolo": "Antonio Testa",
+        "anno": "2022",
+        "tag": "web",
+        "img": "url(./assets/img/antonio.png)"
+    },
+    {
+        "titolo": "Asso Imprese",
+        "anno": "2022",
+        "tag": "web",
+        "img": "url(./assets/img/assoimprese.png)"
+    }
+]
