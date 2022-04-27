@@ -19,12 +19,12 @@
                 <li>worsks</li>
             </a>
             <a href="" class="trigged" id="about">
-                <!-- <li>contacts</li> -->
+                <li>contact me</li>
             </a>
         </ul>
     </header>
-    <div class="clip micro">
-        <div class="porto-container" x-data="Components.projects()">
+    <div class="clip" id="smooth-wrapper">
+        <div class="porto-container" x-data="Components.projects()" id="smooth-content">
 
          <!-- <template x-for="project"> -->
         <a class="work" href="singola.html">
@@ -175,6 +175,11 @@
     
         </div>
     </div>
-    <script  src="/scripts/portfolio.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollSmoother.min.js"></script> -->
+  
+    <script type="module" src="index.js"></script>
 </body>
 </html>  
+

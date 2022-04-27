@@ -1,0 +1,19 @@
+footer{
+    div:nth-child(1){
+        display: flex; 
+        width: 50vw; 
+        justify-content: 
+        space-between;
+        align-items: center; 
+        position: fixed; 
+        bottom:0; 
+        padding: 2% 3%}
+        .social{
+            
+            a{
+                font-size: 1.3rem;
+                color: $graya;
+                padding-left: 2rem;
+            }
+        }
+    }

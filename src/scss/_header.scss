@@ -2,23 +2,13 @@ header{
     display: flex;
     justify-content: space-between;
     position: fixed;
-    padding: 2% 3%;
-    width: 50vw;
+    
+    width: 100%;
     z-index: 1000;
-    a:nth-child(2){
-        position: relative;
-
-    }
     ul{
+        display: flex;
         text-align: end;
         text-transform: uppercase;
-        width: 100px;
-    }
-}
-
-.porto{
-    header {
-        justify-content: space-between;
-        width: 100%;
+        // width: 100px;
     }
 }

@@ -20,13 +20,14 @@
 section::-webkit-scrollbar, .single .wrap section:nth-child(2)::-webkit-scrollbar, .single::-webkit-scrollbar, section::-webkit-scrollbar
 {display: none;}
 
-body{
+.home{
     overflow: hidden; 
     cursor: crosshair;
     margin: 0; 
     padding: 0;
-    background-color: #cacaca;
+    background-color: $background;
 }
+body{background-color: $background;}
 
 //sfondo animato di disturbo
 .noise-bg {

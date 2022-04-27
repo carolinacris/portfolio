@@ -42,10 +42,22 @@
                     }
                 section:nth-child(1){
                     .text-box{
-                        height: 80vh;
+                        padding: 20px ;
+                        height: 80vh; 
                     }
                 }
-        
+                section:nth-child(2){
+                  
+                    display: flex;
+                    flex-wrap: nowrap;
+                    
+                    
+                    img{
+                        margin: -2px 0;
+                        padding: 0; 
+                        gap:0;
+                     }
+                }
             }
          
     }

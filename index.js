@@ -1,10 +1,17 @@
 // import Palla from './scripts/Palla.js'
 import SetCanva from './scripts/SetCanva.js'
 
+// gsap.to(".work", 
+//     {
+//         opacity:0,
+//         duration:3
+//     }
+// )
 
 // new Palla();
 
 const canvas = new SetCanva;
+// const portfolio = new Portfolio;
 
 console.log(window.innerHeight, window.innerWidth)
 
@@ -16,7 +23,7 @@ const container = document.querySelector(".container")
 
 
 const wrap = document.querySelector(".wrap")
-comparsa.style.width =  w+ "px";
+comparsa.style.width =  w + "px";
 comparsa.style.height=  h + "px";
 wrap.width =  w + "px";
 wrap.height =  h + "px";
@@ -42,4 +49,12 @@ console.log(container.height);
 const textBox = document.querySelector(".text-box")
 textBox.style.width = contW/6*4 + "px"
 textBox.style.margin = contW/6*1 + "px"
+
+// ----------------------------------------------------------------- 
+// gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+// let smoother = ScrollSmoother.create({
+//     smooth: 2,   // seconds it takes to "catch up" to native scroll position
+//     effects: true // look for data-speed and data-lag attributes on elements and animate accordingly
+//   });
 
