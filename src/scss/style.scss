@@ -16,8 +16,8 @@
 .container::-webkit-scrollbar, 
 .body::-webkit-scrollbar, 
 .porto::-webkit-scrollbar, 
-.clip::-webkit-scrollbar,
-section::-webkit-scrollbar, .single .wrap section:nth-child(2)::-webkit-scrollbar
+.clip::-webkit-scrollbar, .gallery::-webkit-scrollbar,
+section::-webkit-scrollbar, .single .wrap section:nth-child(2)::-webkit-scrollbar, .single::-webkit-scrollbar, section::-webkit-scrollbar
 {display: none;}
 
 body{
