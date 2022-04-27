@@ -10,6 +10,7 @@ export default class Palla{
             //metto che la collisione di default è falsa
             this.collided = false;
             // this.follow()
+            // this.vibration();
     }
 
     draw(){
@@ -104,9 +105,25 @@ export default class Palla{
         this.ctx.closePath()
 
     }
+ //vanno chiamate la x e la y di palla
 
 
     
+    
+    randomAnimate(x, y){
+        this.x = x
+        this.y = y
+
+        function boh() {
+            this.x*Math.random()
+            
+        }
 
 
+        requestAnimationFrame(this.randomAnimate)
+        // console.log(this.animateX(), this.animateY());
+       }
+
+
+    
 }

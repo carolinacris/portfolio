@@ -26,6 +26,7 @@ export default class SetCanva{
 
   
 }
+
 clear(){
   //una funzione che chiamo per resettare la canvas
   //noi cancello il foglio dalla cordinata 0, 0 fino alla grandezza della canva
@@ -33,12 +34,14 @@ clear(){
   //se funziona con l'animation frame verrà stampato un'infinità di volte
   console.log("Cleared canvas");
 }
-//solo quando chiamo il metodo redraw la palla viene disegnata
+//solo quando chiamo il metodo redraw la palla viene disegnata, tutte le volte che devo chiedere di disegnare una palla devo anche chiamare il metodo redraw
 redraw() {
+  this.clear
   this.palle.forEach((palla) => {
-    // this.clear();
     palla.draw();
+    palla.randomAnimate();
   });
+
   
 }
 
@@ -84,7 +87,7 @@ random(){
   const maxx = this.canvas.width/2 + this.stRadius
   const random = Math.random() * (maxx - minx) + minx;
   console.log( "random"  + random);
-
+//qui dovrei mettere request animation frame che chiama il numero random 
   return random 
 
 }
@@ -99,6 +102,10 @@ randomDue(){
   return random 
 
 }
+
+
+
+
 
 }
  
@@ -120,7 +127,12 @@ randomDue(){
 //   clear
 //   hfjfonfdpd
 
-//   window.animationFrame(name) andra in draw
+//   window.animationFrame(name) andra in draw, per ogni frame fai questa funzione
 // }
 
 //la prima volta chge faccio animare la 
+
+//mi passo il valore di x e y e li faccio oscillare tra due numeri, aggiungi e rimuovo due ad x e y per ogni frame,
+
+
+//posso usare gsap per l'animazione

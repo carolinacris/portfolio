@@ -1,7 +1,9 @@
 // import Palla from './scripts/Palla.js'
 import SetCanva from './scripts/SetCanva.js'
 
+
 // new Palla();
+
 const canvas = new SetCanva;
 
 console.log(window.innerHeight, window.innerWidth)
@@ -11,6 +13,8 @@ const w = window.innerWidth
 const h = window.innerHeight
 const comparsa = document.querySelector(".comparsa")
 const container = document.querySelector(".container")
+
+
 const wrap = document.querySelector(".wrap")
 comparsa.style.width =  w+ "px";
 comparsa.style.height=  h + "px";
@@ -35,67 +39,7 @@ container.style.height = conth + "px"
 console.log(container.height);
 
 
-
-//----------------------------------------------------------------------------------------MOUSE MOVE ------------------------------------------------------------
-
-// const mosuseMove = function mosuseMove(){
-  
-//   let el = document.getElementById("who"),
-//   elWidth = el.offsetWidth,
-//   elHeight = el.offsetHeight,
-//   width = window.innerWidth,
-//   height = window.innerHeight,
-//   target = {
-//     x: width / 2,
-//     y: height / 2
-//   },
-//   position = {
-//     x: height,
-//     y: width
-//   },
-//   ease = 0.1;
-
-// window.addEventListener("mousemove", function(event) {
-
-//   target.x = event.clientX;
-//   target.y = event.clientY;
-// });
-
-// function update() {
-//   var dx = target.x - position.x,
-//     dy = target.y - position.y,
-//     vx = dx *ease,
-//     vy = dy  *ease;
-
-//   position.x += vx;
-//   position.y += vy;
-
-//   el.style.left = (position.x - elWidth / 2).toFixed() + "px";
-//   el.style.top = (position.y - elHeight / 2).toFixed() + "px";
-
-//   requestAnimationFrame(update);
-// }
-
-// update();
-// // function stop(){
-  
-// // }
-// }
-
-// mosuseMove()
-// ----------------------------------------- cursore ---------------------------------
-// const button=document.querySelector('.who')
-
-// function bIo(){
-//   button.addEventListener("click", function(event){
-//     button.classList.toggle('open')
-//     let textBio= document.querySelector('.text-bio')
-//     button.append(textBio)
-//     textBio.classList.toggle('display')
-    
-
-//   })
-// }
-
-// bIo();
+const textBox = document.querySelector(".text-box")
+textBox.style.width = contW/6*4 + "px"
+textBox.style.margin = contW/6*1 + "px"
 

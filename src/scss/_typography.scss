@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Darker Grotesque Regular';
+    src: url(/assets/fonts/DarkerGrotesque-Regular.ttf);
+}
+h1{
+  font-size: 5rem ;    
+  font-family: 'Darker Grotesque Regular'; 
+  text-transform: uppercase;
+  font-weight: 400;
+}
+p, button, a{
+    color: #242424; 
+    font-family: 'Darker Grotesque Regular'; 
+    font-size: 1.5rem; 
+    line-height: 1.6rem; 
+  // margin: 2rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+span{
+    font-family: 'Darker Grotesque Regular'; 
+    color: #242424; 
+    font-size: 24px; 
+    text-align: center; 
+    padding-top: 2px
+  }
+
+header{
+  
+    a{
+      font-size: 1.2rem;
+    }
+    
+    ul{
+      li{
+
+        &:hover{
+          animation: trigger 1s steps(2) infinite;
+          font-weight: 600;
+        &:before{
+          content: "> ";
+        }
+        }
+    }}
+  
+}
+  

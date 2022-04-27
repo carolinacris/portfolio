@@ -1,0 +1,44 @@
+.single{
+    overflow: scroll;
+    .wrap{
+        section{
+            width: 50%;
+        }
+        section:nth-child(1){
+            padding: 3% 2%;
+            position: fixed;
+            .text-box{
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                h1{text-align: center;}
+            }
+
+
+        }
+        section:nth-child(2){
+            position: absolute;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            
+            img{
+                margin: -2px 0;
+                padding: 0; 
+                gap:0;
+             }
+        }
+    }
+
+    @media (max-width: $tablet ){
+       .wrap{
+           display: flex; 
+           flex-wrap: wrap;
+           section:nth-child(1){
+               position: static;
+           }
+       }
+    }
+    
+}
